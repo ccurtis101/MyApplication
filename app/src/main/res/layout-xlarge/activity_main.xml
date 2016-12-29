@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.chriscu.myapplication.MainActivity">
+
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:theme="?attr/actionBarTheme"
+        android:minHeight="?attr/actionBarSize"
+        android:id="@+id/toolbar" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="1">
+
+            <Button
+                android:text="CLICK HERE"
+                android:layout_width="149dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/button" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text|textCapWords|textPersonName"
+                android:text="Name"
+                android:ems="10"
+                android:id="@+id/enterName"
+                tools:text="ENTER NAME"
+                android:layout_weight="0.10"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:onClick="App" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/newName"
+                android:layout_weight="0.20"
+                android:textSize="18sp"
+                android:textAlignment="center"
+                android:text="YOUR SUPERHERO IS...."
+                android:editable="true"
+                android:onClick="Result" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>

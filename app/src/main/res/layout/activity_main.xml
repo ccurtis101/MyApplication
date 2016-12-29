@@ -22,42 +22,36 @@
         android:layout_height="895dp"
         android:weightSum="1">
 
-        <LinearLayout
-            android:orientation="vertical"
+        <Button
+            android:text="CLICK HERE"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:weightSum="1">
+            android:layout_height="wrap_content"
+            android:id="@+id/button" />
 
-            <Button
-                android:text="CLICK HERE"
-                android:layout_width="149dp"
-                android:layout_height="wrap_content"
-                android:id="@+id/button" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text|textCapWords|textPersonName"
+            android:text="Name"
+            android:ems="10"
+            android:id="@+id/enterName"
+            tools:text="ENTER NAME"
+            android:layout_weight="0.10"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:onClick="App" />
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="text|textCapWords|textPersonName"
-                android:text="Name"
-                android:ems="10"
-                android:id="@+id/enterName"
-                tools:text="ENTER NAME"
-                android:layout_weight="0.10"
-                android:textAlignment="center"
-                android:textSize="18sp"
-                android:onClick="App" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/newName"
+            android:layout_weight="0.13"
+            android:textSize="18sp"
+            android:textAlignment="center"
+            android:text="YOUR SUPERHERO IS...."
+            android:editable="false"
+            android:onClick="Result" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/newName"
-                android:layout_weight="0.20"
-                android:textSize="18sp"
-                android:textAlignment="center"
-                android:text="YOUR SUPERHERO IS...."
-                android:editable="true"
-                android:onClick="Result" />
-        </LinearLayout>
 
     </LinearLayout>
 

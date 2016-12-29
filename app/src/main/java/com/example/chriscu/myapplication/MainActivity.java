@@ -10,6 +10,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,6 +24,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+
+
+
 
 ///new code here...
     }
@@ -35,6 +44,12 @@ public class MainActivity extends AppCompatActivity {
                     public void onClick(View view)
                     {
                         Log.v("enterName ", NameEntered.getText().toString());
+                        Toast.makeText(getApplicationContext(), "Choose another name ", Toast.LENGTH_LONG).show();
+                        TextView randomName;
+
+                        randomName = (TextView)findViewById(R.id.newName);
+                        randomName.setText("Escriba su mensaje y luego seleccione el canal.");
+
                     }
                 });
 
@@ -43,7 +58,21 @@ public class MainActivity extends AppCompatActivity {
 
     public void Result (View view){
 
-    TextView Supername = (TextView) findViewById(R.id.newName);
+    TextView randomName;
+
+        randomName = (TextView)findViewById(R.id.newName);
+        randomName.setText("Escriba su mensaje y luego seleccione el canal.");
+
+
+        List<String> list = new ArrayList<String>();
+        list.add("spiderman");
+        list.add("wonderwoman");
+        list.add("hulk");
+
+
+        Random rand = new Random();
+        String randomGen = list.get(rand.nextInt(list.size()));
+
 
 
 
