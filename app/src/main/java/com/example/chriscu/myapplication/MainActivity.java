@@ -3,8 +3,13 @@ package com.example.chriscu.myapplication;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -14,6 +19,33 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+///new code here...
+    }
+
+    public void App (View view) {
+
+        final EditText NameEntered = (EditText) findViewById(R.id.enterName);
+        Button  ButtonClicked = (android.widget.Button) findViewById(R.id.button);
+
+
+        ButtonClicked.setOnClickListener(
+                new View.OnClickListener()
+                {
+                    public void onClick(View view)
+                    {
+                        Log.v("enterName ", NameEntered.getText().toString());
+                    }
+                });
+
+    }
+
+
+    public void Result (View view){
+
+    TextView Supername = (TextView) findViewById(R.id.newName);
+
+
 
 
     }
