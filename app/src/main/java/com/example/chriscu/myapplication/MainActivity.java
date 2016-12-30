@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
     TextView randomName;
 
         randomName = (TextView)findViewById(R.id.newName);
-        randomName.setText("Escriba su mensaje y luego seleccione el canal.");
+        randomName.setText("Enter your name please...");
 
 
         List<String> list = new ArrayList<String>();
