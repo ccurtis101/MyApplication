@@ -1,5 +1,6 @@
 package com.example.chriscu.myapplication;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -7,14 +8,11 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -44,15 +42,17 @@ public class MainActivity extends AppCompatActivity {
                 {
                     public void onClick(View view)
                     {
-
+                       /// HIDE KEYBOARD ////////////////////
+                        InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+                        imm.hideSoftInputFromWindow(NameEntered.getWindowToken(), 0);
 
                         Log.v("enterName ", NameEntered.getText().toString());
-                       // Toast.makeText(getApplicationContext(), "Choose another name ", Toast.LENGTH_LONG).show();
+
                         TextView randomName;
 
                         //////START OF IF FOR NAMES///////////////////////
 
-
+                        randomName = (TextView)findViewById(R.id.newName);
                        String EspName = NameEntered.getText().toString();
 
                         String[] thisIsAStringArray = {"AAA", "BBB", "CCC", "DDD", "EEE"};
@@ -81,6 +81,8 @@ public class MainActivity extends AppCompatActivity {
 
                             Log.v("CHRIS XXXXXXXXXXXXXX", NameEntered.getText().toString());
                             Toast.makeText(getApplicationContext(), "XXXXXXXXXXXXXX ", Toast.LENGTH_LONG).show();
+
+
                         }
 
                         else
@@ -91,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
 
                         NameEntered.getText().clear();
 
-                        randomName = (TextView)findViewById(R.id.newName);
+
                         randomName.setText("Escriba su mensaje y luego seleccione el canal.");
 
                     }
@@ -103,23 +105,12 @@ public class MainActivity extends AppCompatActivity {
     public void Result (View view){
 
 
+        TextView NewName = (TextView) findViewById(R.id.newName);
 
 
-
-    TextView randomName;
-
-        randomName = (TextView)findViewById(R.id.newName);
-        randomName.setText("Enter your name please...");
+          NewName.setText("Enter your name please...");
 
 
-        List<String> list = new ArrayList<String>();
-        list.add("spiderman");
-        list.add("wonderwoman");
-        list.add("hulk");
-
-
-        Random rand = new Random();
-        String randomGen = list.get(rand.nextInt(list.size()));
 
 
 
