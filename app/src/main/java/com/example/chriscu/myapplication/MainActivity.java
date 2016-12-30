@@ -9,10 +9,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
+import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,9 +25,12 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+////ADDING WEB VIEW
+        WebView simpleWebView=(WebView) findViewById(R.id.simpleWebView);
+// specify the url of the web page in loadUrl function
+        simpleWebView.loadUrl("http://youtube.com/");
 
-
-
+        ////END OF WEB VIEW /////////////
 
 ///new code here...
     }
@@ -66,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
 
                         if (EspName.equals(thisIsAStringArray[0])) {
 
-                            Log.v("ARRRAYYYYBBB", NameEntered.getText().toString());
+                            Log.v("ARRRAYYYYAAA", NameEntered.getText().toString());
                             Toast.makeText(getApplicationContext(), "ARRRAYYAAA ", Toast.LENGTH_LONG).show();
                         }
                         else

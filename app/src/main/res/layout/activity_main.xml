@@ -68,6 +68,14 @@
             android:background="@android:color/holo_orange_light" />
 
 
+        <WebView
+            android:id="@+id/simpleWebView"
+            android:layout_width="fill_parent"
+            android:layout_height="35dp"
+            android:layout_weight="0.28" />
+
+
+
     </LinearLayout>
 
 
