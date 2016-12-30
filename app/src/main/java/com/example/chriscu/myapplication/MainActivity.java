@@ -44,9 +44,27 @@ public class MainActivity extends AppCompatActivity {
                 {
                     public void onClick(View view)
                     {
+
+
                         Log.v("enterName ", NameEntered.getText().toString());
-                        Toast.makeText(getApplicationContext(), "Choose another name ", Toast.LENGTH_LONG).show();
+                       // Toast.makeText(getApplicationContext(), "Choose another name ", Toast.LENGTH_LONG).show();
                         TextView randomName;
+
+                        //////START OF IF FOR NAMES
+
+                       String EspName = NameEntered.getText().toString();
+
+                        if (EspName.equals("Chris")) {
+
+                            Log.v("CHRIS XXXXXXXXXXXXXX", NameEntered.getText().toString());
+                            Toast.makeText(getApplicationContext(), "XXXXXXXXXXXXXX ", Toast.LENGTH_LONG).show();
+                        }
+
+                        else
+
+                            Toast.makeText(getApplicationContext(), "Choose another name ", Toast.LENGTH_LONG).show();
+
+                        ////END OF IF FOR NAMES
 
                         NameEntered.getText().clear();
 
@@ -60,6 +78,10 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void Result (View view){
+
+
+
+
 
     TextView randomName;
 
