@@ -46,6 +46,8 @@ public class MainActivity extends AppCompatActivity {
                         InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
                         imm.hideSoftInputFromWindow(NameEntered.getWindowToken(), 0);
 
+                        ///END OF HIDE KEYBOARD/////////
+
                         Log.v("enterName ", NameEntered.getText().toString());
 
                         TextView randomName;
@@ -89,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
 
                             Toast.makeText(getApplicationContext(), "Choose another name ", Toast.LENGTH_LONG).show();
 
-                        ////END OF IF FOR NAMES
+                        ////END OF IF FOR NAMES////////////////////
 
                         NameEntered.getText().clear();
 
