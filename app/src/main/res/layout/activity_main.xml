@@ -36,7 +36,8 @@
             android:layout_weight="0.03"
             android:fontFamily="sans-serif"
             android:gravity="center_vertical"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:background="@android:color/holo_orange_light" />
 
         <EditText
             android:layout_width="match_parent"
@@ -49,7 +50,8 @@
             android:layout_weight="0.07"
             android:textAlignment="center"
             android:textSize="18sp"
-            android:onClick="App" />
+            android:onClick="App"
+            android:background="@android:color/holo_green_dark" />
 
         <TextView
             android:layout_width="match_parent"
@@ -61,7 +63,8 @@
             android:text="YOUR SUPERHERO IS...."
             android:editable="false"
             android:onClick="Result"
-            android:gravity="center_vertical|center_horizontal" />
+            android:gravity="center_vertical|center_horizontal"
+            android:background="@android:color/holo_orange_light" />
 
 
     </LinearLayout>
