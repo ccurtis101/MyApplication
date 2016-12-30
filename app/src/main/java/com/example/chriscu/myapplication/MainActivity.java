@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         Button  ButtonClicked = (android.widget.Button) findViewById(R.id.button);
 
 
+
         ButtonClicked.setOnClickListener(
                 new View.OnClickListener()
                 {
@@ -46,6 +47,8 @@ public class MainActivity extends AppCompatActivity {
                         Log.v("enterName ", NameEntered.getText().toString());
                         Toast.makeText(getApplicationContext(), "Choose another name ", Toast.LENGTH_LONG).show();
                         TextView randomName;
+
+                        NameEntered.getText().clear();
 
                         randomName = (TextView)findViewById(R.id.newName);
                         randomName.setText("Escriba su mensaje y luego seleccione el canal.");

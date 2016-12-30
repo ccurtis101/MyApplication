@@ -28,6 +28,16 @@
             android:layout_height="wrap_content"
             android:id="@+id/button" />
 
+        <TextView
+            android:text="TYPE IN THE NAME BELOW, THEN CLICK BUTTON"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView"
+            android:layout_weight="0.03"
+            android:fontFamily="sans-serif"
+            android:gravity="center_vertical"
+            android:textAlignment="center" />
+
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -36,7 +46,7 @@
             android:ems="10"
             android:id="@+id/enterName"
             tools:text="ENTER NAME"
-            android:layout_weight="0.10"
+            android:layout_weight="0.07"
             android:textAlignment="center"
             android:textSize="18sp"
             android:onClick="App" />
@@ -45,12 +55,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/newName"
-            android:layout_weight="0.13"
+            android:layout_weight="0.25"
             android:textSize="18sp"
             android:textAlignment="center"
             android:text="YOUR SUPERHERO IS...."
             android:editable="false"
-            android:onClick="Result" />
+            android:onClick="Result"
+            android:gravity="center_vertical|center_horizontal" />
 
 
     </LinearLayout>
