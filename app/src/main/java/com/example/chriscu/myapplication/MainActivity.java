@@ -30,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
 // specify the url of the web page in loadUrl function
         simpleWebView.loadUrl("http://youtube.com/");
 
+
+
         ////END OF WEB VIEW /////////////
 
 ///new code here...
