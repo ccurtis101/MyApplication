@@ -50,9 +50,32 @@ public class MainActivity extends AppCompatActivity {
                        // Toast.makeText(getApplicationContext(), "Choose another name ", Toast.LENGTH_LONG).show();
                         TextView randomName;
 
-                        //////START OF IF FOR NAMES
+                        //////START OF IF FOR NAMES///////////////////////
+
 
                        String EspName = NameEntered.getText().toString();
+
+                        String[] thisIsAStringArray = {"AAA", "BBB", "CCC", "DDD", "EEE"};
+                        System.out.println( thisIsAStringArray[0] );
+                        System.out.println( thisIsAStringArray[1] );
+                        System.out.println( thisIsAStringArray[2] );
+                        System.out.println( thisIsAStringArray[3] );
+                        System.out.println( thisIsAStringArray[4] );
+
+                        if (EspName.equals(thisIsAStringArray[0])) {
+
+                            Log.v("ARRRAYYYYBBB", NameEntered.getText().toString());
+                            Toast.makeText(getApplicationContext(), "ARRRAYYAAA ", Toast.LENGTH_LONG).show();
+                        }
+                        else
+
+                        if (EspName.equals(thisIsAStringArray[1])) {
+
+                            Log.v("ARRRAYYYYBBBB", NameEntered.getText().toString());
+                            Toast.makeText(getApplicationContext(), "ARRRAYYBBBB ", Toast.LENGTH_LONG).show();
+                        }
+                        else
+
 
                         if (EspName.equals("Chris")) {
 
@@ -103,6 +126,8 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
