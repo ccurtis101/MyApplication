@@ -10,13 +10,16 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity  {
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,17 +28,15 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-////ADDING WEB VIEW
+// initiate a web view
         WebView simpleWebView=(WebView) findViewById(R.id.simpleWebView);
 // specify the url of the web page in loadUrl function
         simpleWebView.loadUrl("http://youtube.com/");
-
-
-
-        ////END OF WEB VIEW /////////////
-
-///new code here...
     }
+
+
+
+
 
     public void App (View view) {
 
@@ -118,6 +119,9 @@ public class MainActivity extends AppCompatActivity {
 
 
           NewName.setText("Enter your name please...");
+
+
+
 
 
 
